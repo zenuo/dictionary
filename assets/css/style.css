@@ -1,0 +1,387 @@
+a {
+  color: #666;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  color: #000;
+}
+img {
+  border: 0;
+}
+body {
+  font-size: .9em;
+  margin: 50px 0 0 0;
+}
+header {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  height: 9em;
+}
+header h1 {
+  font-size: 7.5em;
+  height: 1em;
+  line-height: 1em;
+}
+header > div {
+  position: relative;
+  bottom: 50%;
+  right: 50%;
+}
+header > div > p > br {
+  display: none;
+}
+#toolbox {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 98;
+}
+#toolbox * {
+  z-index: 99;
+}
+#search {
+  padding: 5px;
+  background-color: #2c2c2c;
+  background-image: -moz-linear-gradient(top, #333333, #222222);
+  background-image: -ms-linear-gradient(top, #333333, #222222);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
+  background-image: -webkit-linear-gradient(top, #333333, #222222);
+  background-image: -o-linear-gradient(top, #333333, #222222);
+  background-image: linear-gradient(top, #333333, #222222);
+  background-repeat: repeat-x;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+#search > form {
+  margin-bottom: 0;
+}
+#options-wrapper {
+  display: none;
+  padding-top: 5px;
+  background-color: #eeeeee;
+  /* Old browsers */
+  background-repeat: repeat-x;
+  /* Repeat the gradient */
+  background-image: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+  /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #eeeeee));
+  /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+  /* Chrome 10+,Safari 5.1+ */
+  background-image: -ms-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+  /* IE10+ */
+  background-image: -o-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+  /* Opera 11.10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eeeeee', GradientType=0);
+  /* IE6-9 */
+  background-image: linear-gradient(to bottom, #f5f5f5 0%, #eeeeee 100%);
+  /* W3C */
+  border: 1px solid #e5e5e5;
+}
+#options > select,
+#options button {
+  margin-bottom: 5px;
+  vertical-align: baseline;
+}
+#options > div {
+  display: inline-block;
+}
+#loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 101;
+  display: none;
+}
+#loading > span.box {
+  color: #fff;
+  background: #333;
+  width: 48px;
+  height: 20px;
+  top: -10px;
+  left: -24px;
+  padding: 7px;
+  display: block;
+  text-align: center;
+  position: relative;
+  opacity: .8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.dictionary {
+  margin: 1em;
+}
+.dictionary em {
+  font-weight: bold;
+  font-style: normal;
+}
+.dictionary a {
+  color: #0E774A;
+  word-wrap: break-word;
+}
+.dictionary a:active {
+  color: #CC1111;
+}
+.dictionary a.sound {
+  color: #333;
+  margin: 0 .5em;
+  height: 1em;
+  width: 1em;
+  opacity: .6;
+  display: inline-block;
+  vertical-align: top;
+}
+.dictionary a.sound:hover {
+  text-decoration: none;
+  opacity: .8;
+}
+.dictionary div.synonyms div:before,
+.dictionary div.primaries div:before,
+.dictionary div.primaries span:before {
+  content: " ";
+}
+.dictionary div.synonyms:first-child:before,
+.dictionary div.primaries:first-child:before,
+.dictionary div.webDefinitions:before {
+  background-color: #F5F5F5;
+  border-style: solid;
+  border-color: #E5E5E5;
+  border-width: 1px 0;
+  font-weight: bold;
+  font-size: 1.2em;
+  display: block;
+  padding: .5em 1em;
+  margin: 1em 0;
+}
+.dictionary div.synonyms:first-child:before,
+.dictionary div.primaries:first-child:before {
+  content: "Dictionary";
+}
+.dictionary div.synonyms:first-child > div.terms:first-child > span.text,
+.dictionary div.primaries:first-child > div.terms:first-child > span.text {
+  font-size: 1.5em;
+  font-weight: bold;
+  display: block;
+  margin-bottom: .25em;
+}
+.dictionary div.synonyms > div.terms:first-child > span.text,
+.dictionary div.primaries > div.terms:first-child > span.text {
+  display: none;
+}
+.dictionary div.synonyms > div.related > div.terms,
+.dictionary div.primaries > div.related > div.terms {
+  color: #767676;
+  display: inline-block;
+}
+.dictionary div.synonyms > div.related > div.terms:after,
+.dictionary div.primaries > div.related > div.terms:after {
+  content: ";";
+}
+.dictionary div.synonyms > div.related > div.terms:last-child:after,
+.dictionary div.primaries > div.related > div.terms:last-child:after {
+  content: "";
+}
+.dictionary div.synonyms > div.terms:first-child:after,
+.dictionary div.synonyms div.related:first-child:after,
+.dictionary div.synonyms div.related:last-child:after {
+  content: "";
+  display: block;
+  border-bottom: solid 1px #E5E5E5;
+}
+.dictionary div.synonyms > div.terms:first-child:after {
+  margin: .75em 1.5em;
+}
+.dictionary div.synonyms > div.terms * {
+  margin-left: .5em;
+}
+.dictionary div.synonyms > div.related {
+  margin: 0 1.5em .5em 1.5em;
+}
+.dictionary div.synonyms > div.related:first-child:after,
+.dictionary div.synonyms > div.related:last-child:after {
+  margin: .75em 0;
+}
+.dictionary div.synonyms > div.related > * {
+  margin-left: .5em;
+}
+.dictionary div.synonyms > div.related span.labels {
+  display: block;
+}
+.dictionary div.synonyms > div.related span.text {
+  cursor: pointer;
+}
+.dictionary div.synonyms > div.related span.text:hover {
+  text-decoration: underline;
+}
+.dictionary div.primaries {
+  counter-reset: dictprimaries;
+}
+.dictionary div.primaries > div.entries {
+  counter-reset: dictprimariesentries;
+}
+.dictionary div.primaries > div.meaning {
+  margin: 0 1.5em .5em 1.5em;
+}
+.dictionary div.primaries > div.meaning > div.terms > * {
+  margin-left: 0;
+}
+.dictionary div.primaries > div.meaning > div.terms > span.text {
+  padding-right: 1em;
+  margin-left: 1em;
+  position: relative;
+  display: block;
+}
+.dictionary div.primaries > div.meaning > div.terms > span.text:before {
+  counter-increment: dictprimaries;
+  content: counter(dictprimaries) ".\0000a0";
+  position: absolute;
+  right: 100%;
+}
+.dictionary div.primaries > div.terms {
+  display: inline-block;
+}
+.dictionary div.primaries > div.terms > * {
+  margin-left: 1em;
+}
+.dictionary div.primaries > div.terms > *:first-child {
+  margin-left: .5em;
+}
+.dictionary div.primaries > div.related > div.terms > span.text {
+  font-weight: bold;
+}
+.dictionary div.primaries > div.related > div.terms > span.text:first-child {
+  margin-left: .5em;
+}
+.dictionary div.primaries > div.entries > div.meaning {
+  margin: 0 1.5em .5em 1.5em;
+}
+.dictionary div.primaries > div.entries > div.meaning > div.terms > span.text {
+  padding-right: 1em;
+}
+.dictionary div.primaries > div.entries > div.meaning > div.terms > span.text:before {
+  content: "\0000a0\0000a0\0000a0\0000a0";
+}
+.dictionary div.primaries > div.entries > div.meaning > div.terms:first-child > span.text {
+  margin-left: 1em;
+  position: relative;
+  display: block;
+}
+.dictionary div.primaries > div.entries > div.meaning > div.terms:first-child > span.text:before {
+  counter-increment: dictprimariesentries;
+  content: counter(dictprimariesentries) ".\0000a0";
+  position: absolute;
+  right: 100%;
+}
+.dictionary div.primaries > div.entries > div.terms {
+  display: inline-block;
+  margin-left: .75em;
+}
+.dictionary div.primaries > div.entries > div.related {
+  margin: 0 1.5em .5em 1.5em;
+}
+.dictionary div.primaries div.example {
+  color: #767676;
+  margin-left: 2em;
+}
+.dictionary div.primaries div.example > div.terms > span.text {
+  margin-left: 1em;
+  position: relative;
+  display: block;
+}
+.dictionary div.primaries div.example > div.terms:first-child > span.text:before {
+  content: "-\0000a0";
+}
+.dictionary div.primaries div.example > div.terms > span.text:before {
+  content: "\0000a0\0000a0";
+  position: absolute;
+  right: 100%;
+}
+.dictionary div.webDefinitions:before {
+  content: "Web definitions";
+}
+.dictionary div.webDefinitions > div.terms {
+  display: none;
+}
+.dictionary div.webDefinitions > div.meaning {
+  margin: 0 .5em;
+}
+.dictionary div.webDefinitions > div.meaning > div.terms {
+  margin-bottom: .25em;
+}
+.dictionary div.webDefinitions > div.meaning > div.terms > span.text {
+  display: inline-block;
+}
+.dictionary div.webDefinitions > div.meaning > div.terms > span.text:after {
+  content: "";
+  display: block;
+  border-bottom: dashed 1px #E5E5E5;
+}
+.dictionary div.webDefinitions > div.meaning > a {
+  display: block;
+  margin-bottom: 1.5em;
+}
+.dictionary [title=Phonetic] {
+  color: #767676;
+}
+.dictionary [title^="Part-of"],
+.dictionary [title=Word] {
+  font-weight: bold;
+}
+.dictionary [title=Geographic],
+.dictionary [title=Grammar],
+.dictionary [title=Reference],
+.dictionary [title=Register],
+.dictionary [title=Subject] {
+  border-left: dotted 1px #BBB;
+  margin-left: 0.5em;
+  color: #767676;
+}
+@media screen and (max-width: 33.75em), screen and (max-height: 33.75em) {
+  header h1 {
+    font-size: 3em;
+  }
+  header > div > p > br {
+    display: inline;
+  }
+  #toolbox {
+    position: absolute;
+    text-align: center;
+  }
+  #options {
+    padding-right: 5px;
+  }
+}
+@media screen and (min-width: 57em) {
+  footer > div,
+  #toolbox > div > *,
+  #dictionary {
+    width: 52.5em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer p,
+  footer p > * {
+    display: inline;
+    vertical-align: top;
+  }
+}
+@media print {
+  body {
+    margin-top: 0;
+  }
+  #toolbox,
+  #github,
+  .typeahead,
+  .dictionary a.sound {
+    display: none;
+  }
+}

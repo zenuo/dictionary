@@ -1,0 +1,287 @@
+.dictionary {
+  margin: 1em;
+
+  em {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  a {
+    color: #0E774A;
+    word-wrap: break-word;
+  }
+
+  a:active {
+    color: #CC1111;
+  }
+
+  a.sound {
+    color: #333;
+    margin: 0 .5em;
+    height: 1em;
+    width: 1em;
+    opacity: .6;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  a.sound:hover {
+    text-decoration: none;
+    opacity: .8;
+  }
+
+  div.synonyms div, div.primaries div, div.primaries span {
+    &:before {
+      content: " ";
+    }
+  }
+
+  div.synonyms:first-child, div.primaries:first-child, div.webDefinitions {
+    &:before {
+      background-color: #F5F5F5;
+      border-style: solid;
+      border-color: #E5E5E5;
+      border-width: 1px 0;
+      font-weight: bold;
+      font-size: 1.2em;
+      display: block;
+      padding: .5em 1em;
+      margin: 1em 0;
+    }
+  }
+
+  div.synonyms, div.primaries {
+    &:first-child {
+      &:before {
+        content: "Dictionary";
+      }
+
+      &>div.terms:first-child>span.text {
+        font-size: 1.5em;
+        font-weight: bold;
+        display: block;
+        margin-bottom: .25em;
+      }
+    }
+
+    &>div.terms:first-child>span.text {
+      display: none;
+    }
+
+    &>div.related>div.terms {
+      color: #767676;
+      display: inline-block;
+
+      &:after {
+        content: ";";
+      }
+
+      &:last-child:after {
+        content: "";
+      }
+    }
+  }
+
+  div.synonyms {
+
+    &>div.terms:first-child, div.related:first-child, div.related:last-child {
+      &:after {
+        content: "";
+        display:block;
+        border-bottom: solid 1px #E5E5E5;
+      }
+    }
+    &>div.terms {
+      &:first-child:after {
+        margin: .75em 1.5em;
+      }
+      * {
+        margin-left: .5em;
+      }
+    }
+    &>div.related {
+      margin: 0 1.5em .5em 1.5em;
+
+      &:first-child:after, &:last-child:after {
+        margin: .75em 0;
+      }
+
+      &>* {
+        margin-left: .5em;
+      }
+
+      span.labels {
+        display: block;
+      }
+
+      span.text {
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  div.primaries {
+    counter-reset: dictprimaries;
+
+    &>div.entries {
+      counter-reset: dictprimariesentries;
+    }
+
+    &>div.meaning {
+      margin: 0 1.5em .5em 1.5em;
+
+      &>div.terms {
+        &>* {
+          margin-left: 0;
+        }
+
+        &>span.text {
+          padding-right: 1em;
+          margin-left: 1em;
+          position: relative;
+          display: block;
+
+          &:before {
+            counter-increment: dictprimaries;
+            content: counter(dictprimaries) ".\0000a0";
+            position: absolute;
+            right: 100%;
+          }
+        }
+      }
+    }
+
+    &>div.terms {
+      display: inline-block;
+
+      &>* {
+        margin-left: 1em;
+
+        &:first-child {
+          margin-left: .5em;
+        }
+      }
+    }
+
+    &>div.related {
+      &>div.terms {
+        &>span.text {
+          font-weight: bold;
+
+          &:first-child {
+            margin-left: .5em;
+          }
+        }
+      }
+    }
+
+    &>div.entries {
+      &>div.meaning {
+        margin: 0 1.5em .5em 1.5em;
+
+        &>div.terms {
+
+          &>span.text {
+            padding-right: 1em;
+
+            &:before {
+              content: "\0000a0\0000a0\0000a0\0000a0";
+            }
+          }
+
+          &:first-child>span.text {
+            margin-left: 1em;
+            position: relative;
+            display: block;
+            &:before {
+              counter-increment: dictprimariesentries;
+              content: counter(dictprimariesentries) ".\0000a0";
+              position: absolute;
+              right: 100%;
+            }
+          }
+        }
+      }
+
+      &>div.terms {
+        display: inline-block;
+        margin-left: .75em;
+      }
+
+      &>div.related {
+        margin: 0 1.5em .5em 1.5em;
+      }
+    }
+
+    div.example {
+      color: #767676;
+      margin-left: 2em;
+
+      &>div.terms {
+        &>span.text {
+          margin-left: 1em;
+          position: relative;
+          display: block;
+        }
+        &:first-child>span.text:before {
+          content: "-\0000a0";
+        }
+
+        &>span.text:before {
+          content: "\0000a0\0000a0";
+          position: absolute;
+          right: 100%;
+        }
+      }
+    }
+  }
+
+  div.webDefinitions {
+    &:before {
+      content: "Web definitions";
+    }
+
+    &>div.terms {
+      display: none;
+    }
+
+    &>div.meaning {
+      margin: 0 .5em;
+
+      &>div.terms {
+        margin-bottom: .25em;
+
+        &>span.text {
+          display: inline-block;
+
+          &:after {
+            content: "";
+            display:block;
+            border-bottom: dashed 1px #E5E5E5;
+          }
+        }
+      }
+
+      &>a {
+        display: block;
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+
+  [title=Phonetic] {
+    color: #767676;
+  }
+  [title^="Part-of"], [title=Word] {
+    font-weight: bold;
+  }
+  [title=Geographic], [title=Grammar], [title=Reference], [title=Register], [title=Subject] {
+    border-left: dotted 1px #BBB;
+    margin-left: 0.5em;
+    color: #767676;
+  }
+}

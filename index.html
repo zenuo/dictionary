@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="dictionary, open source">
+    <meta name="description" content="An open source Dictionary based on Google's Unofficial Dictionary API">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dictionary</title>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+<!--[if IE 8]>
+    <script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--[if lt IE 8]>
+    <script type="text/javascript" src="http://ntk.me/if-IE/if-IE.js"></script>
+<![endif]-->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/ico/apple-touch-icon-144x144.png">
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Dictionary</h1>
+        <br>
+        <p>
+        <a href="https://github.com/ntkme" class="github-button" data-text="Follow @ntkme"></a>
+        <br>
+        <a href="https://github.com/ntkme/dictionary/" class="github-button" data-icon="octicon-star" data-text="Star"
+          data-count-href="/ntkme/dictionary/stargazers" data-count-api="/repos/ntkme/dictionary#stargazers_count"></a>
+        <a href="https://github.com/ntkme/dictionary" class="github-button" data-icon="octicon-git-branch-create" data-text="Fork"
+          data-count-href="/ntkme/dictionary/network" data-count-api="/repos/ntkme/dictionary#forks_count"></a>
+        </p>
+        <script async defer id="github-bjs" src="http://buttons.github.io/buttons.js"></script>
+      </div>
+    </header>
+    <div id="toolbox">
+      <div id="search">
+        <form id="submit" class="form-search">
+          <div class="input-append">
+            <input type="text" id="query" autofocus="autofocus" autocomplete="off" class="input-medium search-query"><button type="submit" class="btn"><i class="icon-search"></i></button>
+          </div>
+          <button type="button" id="toggle-options" class="btn" data-toggle="button"><i class="icon-cog"></i></button>
+        </form>
+      </div>
+      <div id="options-wrapper">
+        <div id="options">
+          <select id="language"></select>
+          <div>
+            <button type="button" id="synonyms" class="btn" data-toggle="button">Synonyms</button>
+            <button type="button" id="examples" class="btn" data-toggle="button">Example</button>
+            <button type="button" id="webDefinitions" class="btn" data-toggle="button">Web definitions</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="loading">
+      <span class="box">
+        <i class="icon-circle"></i>
+        <i class="icon-circle-blank"></i>
+        <i class="icon-circle-blank"></i>
+      </span>
+    </div>
+    <div id="dictionary" class="dictionary"></div>
+  </body>
+</html>
