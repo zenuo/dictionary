@@ -143,6 +143,10 @@ class Delegate
   submit: (@query) ->
     if @onSubmit()
       nonce = ++@nonce
+      clearTimeout(@timeout) if @timeout
+      @timeout = setTimeout =>
+        @onError("Timeout")
+      , 3000
       $.ajax
         url: "https://www.google.com/dictionary/json"
         dataType: "jsonp",
@@ -152,6 +156,7 @@ class Delegate
           tl: @language,
           restrict: "pr,de,sy"
         success: (data) =>
+          clearTimeout(@timeout) if nonce is @nonce and @timeout
           @onData(data) if nonce is @nonce
     return
 
@@ -162,6 +167,11 @@ class Delegate
 
   onLoad: ->
     console.log "onLoad"
+    return
+
+  onError: (error) ->
+    console.log "onError"
+    console.log error
     return
 
   constructor: (options) ->
@@ -253,6 +263,15 @@ dictionary = new Delegate
     loading.stop()
     return
 
+  onError: (error) ->
+    $("#dictionary").hide().html("""
+    404. <span style="color: gray;">That's an error.</span><br>
+    <br>
+    Google is doing evil.<br>
+    <span style="color: gray;">That's all I know.</span>
+    """).fadeIn()
+    return
+
 $(document).ready ->
 
   for key, value of dictionary.languages
@@ -261,7 +280,7 @@ $(document).ready ->
     document.getElementById("language").add option, null
 
   for option, status of settings.options
-    $("#"+option).addClass "active" if status
+    $("##{option}").addClass "active" if status
 
   window.onhashchange() if location.hash
 
