@@ -6,13 +6,12 @@ Yet another Google Dictionary
 Introduction
 ------------
 
-This is a dictionary based on [Google's Unofficial Dictionary API](http://googlesystem.blogspot.com/2009/12/on-googles-unofficial-dictionary-api.html), [MediaWiki API](http://www.wiktionary.org/w/api.php), [twitter/bootstrap](http://twitter.github.com/bootstrap/), and [FortAwesome/Font-Awesome](http://fortawesome.github.com/Font-Awesome/)
+This is a dictionary based on [Google's Unofficial Dictionary API](https://www.googleapis.com/scribe/v1/research?key=AIzaSyDqVYORLCUXxSv7zneerIgC2UYMnxvPeqQ&dataset=dictionary&dictionaryLanguage=en&query=query&callback=callback), [MediaWiki API](http://www.wiktionary.org/w/api.php), [twitter/bootstrap](http://twitter.github.com/bootstrap/), and [FortAwesome/Font-Awesome](http://fortawesome.github.com/Font-Awesome/)
 
 Features
 --------
 
 * Synonyms, Examples
-* Sounds (right click and save it if you like)
 * Remember settings (if browser supports localStorage)
 * Ajax load w/ an unique URL for each different search
 

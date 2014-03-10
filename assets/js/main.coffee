@@ -1,91 +1,129 @@
 "use strict"
 
+Key = "AIzaSyDqVYORLCUXxSv7zneerIgC2UYMnxvPeqQ" # Google Drive
+
 class Dictionary
 
-  set: (@raw) ->
-    @
+  createElement: (tag, attributes, children) ->
+    element = document.createElement tag
+    element.setAttribute name, value for name, value of attributes
+    if children instanceof Array
+      element.appendChild child for child in children
+    else if "[object String]" is Object.prototype.toString.call children
+      element.innerHTML += children
+    element
 
-  get: ->
-    @raw
+  createTextNode: (text) ->
+    document.createTextNode text
 
-  reset: ->
-    @data = @raw
-    @
+  toHTMLElement: ->
+    result = @createElement "div"
+    for group in @data
+      result.appendChild @createElement "div", {
+        class: "displayName"
+        "data-type": group.dataType
+      }, group.groupResult.displayName
 
-  filter: (filters...) ->
-    _results = {}
-    for filter in filters
-      _results[filter] = @raw[filter] if @raw[filter]?
-    @data = _results
-    @
+      result.appendChild @createElement "div", {
+        class: "dictionary"
+        "data-word": group.dictionary.word
+        "data-dictionary-type": group.dictionary.dictionaryType
+      }, do (definitionsData = group.dictionary.definitionData) =>
+        definitions = []
+        for definitionData in definitionsData
+          definitions.push @createElement "div", {
+            class: "definition"
+          }, do =>
+            definition = []
+            for i in ["pos", "phoneticText"]
+              if definitionData[i]
+                definition.push @createElement "span", {
+                  class: i
+                }, definitionData[i]
+                definition.push @createTextNode " "
+            if definitionData.wordForms
+              definition.push @createElement "ul", {
+                class: "wordForms"
+              }, do (wordFormsData = definitionData.wordForms) =>
+                wordForms = []
+                for wordFormData in wordFormsData
+                  wordForms.push @createElement "li", {
+                    class: "wordForm"
+                  }, [(@createElement "span", {
+                        class: "word"
+                      }, wordFormData.word),
+                      (@createTextNode " "),
+                      (@createElement "span", {
+                        class: "form"
+                      }, wordFormData.form)]
+                wordForms
+            if definitionData.meanings
+              definition.push @createElement "ol", {
+                class: "meanings"
+              }, do (meaningsData = definitionData.meanings) =>
+                meanings = []
+                for meaningData in meaningsData
+                  meaning = @createElement "li", {
+                    class: "meaning"
+                  }
+                  if meaningData.meaning
+                    meaning.appendChild @createElement "div", {
+                      class: "meaning"
+                    }, meaningData.meaning
+                  if meaningData.examples
+                    meaning.appendChild @createElement "ul", {
+                      class: "examples"
+                    }, do (examplesData = meaningData.examples) =>
+                      examples = []
+                      for exampleData in examplesData
+                        examples.push @createElement "li", {
+                          class: "example"
+                        }, exampleData
+                      examples
+                  if meaningData.submeanings
+                    meaning.appendChild @createElement "ol", {
+                      class: "submeanings"
+                    }, do (submeaningsData = meaningData.submeanings) =>
+                      submeanings = []
+                      for submeaningData in submeaningsData
+                        submeaning = @createElement "li", {
+                          class: "submeaning"
+                        }
+                        if submeaningData.meaning
+                          submeaning.appendChild @createElement "div", {
+                            class: "submeaning"
+                          }, submeaningData.meaning
+                        if submeaningData.examples
+                          submeaning.appendChild @createElement "ul", {
+                            class: "examples"
+                          }, do (examplesData = submeaningData.examples) =>
+                            examples = []
+                            for exampleData in examplesData
+                              examples.push @createElement "li", {
+                                class: "example"
+                              }, exampleData
+                            examples
+                        submeanings.push submeaning
+                      submeanings
+                  if meaningData.synonyms
+                    meaning.appendChild @createElement "ul", {
+                      class: "synonyms"
+                    }, do (synonymsData = meaningData.synonyms) =>
+                      synonyms = []
+                      for synonymData in synonymsData
+                        synonyms.push @createElement "li", {
+                          class: "synonym"
+                        }, [ @createElement "a", {
+                          class: "synonym"
+                        }, synonymData.nym ]
+                      synonyms
+                  meanings.push meaning
+                meanings
+            definition
+        definitions
+    result
 
-  bullhorn: """<i class="icon-volume-up"></i>"""
-  setBullhorn: (@bullhorn) ->
-    @
-
-  toHtml: (json = @data, type = false) ->
-    switch type
-      when false
-        out = ""
-        tag = false
-      when "labels"
-        out = """<span class="#{type}"#{if json.title? then " title=\"#{json.title}\"" else ""}">#{json.text}"""
-        tag = "span"
-      else
-        switch json.type
-          when "text", "phonetic"
-            out = """<div class="#{type}"><span class="#{json.type}">#{json.text}</span>"""
-            tag = "div"
-          when "url"
-            out = json.text
-            tag = false
-          when "sound"
-            out = """<a class="sound" href="#{json.text}" target="_blank">#{@bullhorn}</a>"""
-            tag = false
-          else
-            out = """<div class="#{type} #{json.type}">"""
-            tag = "div"
-    for key, object of json
-      if object instanceof Array
-        for value in object
-          out += @toHtml value, key
-    out += "</#{tag}>" if tag
-    out
-
-  constructor: (@raw = {}) ->
-    @reset()
-
-class MP3Player
-
-  play: (url) ->
-    if @native
-      audio = document.createElement "audio"
-      audio.src = url
-      audio.play()
-    else
-      if !@player?
-        player = document.createElement "div"
-        player.style.position = "fixed"
-        player.style.top = 0
-        player.style.right = 0
-        @player = document.body.appendChild player
-      @player.removeChild @flash if @flash?
-      @flash = document.createElement "embed"
-      @flash.src = "//ssl.gstatic.com/dictionary/static/sounds/0/SoundApp.swf"
-      @flash.type = "application/x-shockwave-flash"
-      @flash.width = "1"
-      @flash.height = "1"
-      @flash.setAttribute "flashvars", "sound_name=" + encodeURI url
-      @flash.setAttribute "wmode", "transparent"
-      @player.appendChild @flash
-      if window.opera
-        @flash.style.display = "none"
-        @flash.style.display = "block"
-    return
-
-  constructor: ->
-    test = document.createElement "audio"
-    @native = test? and test.canPlayType and test.canPlayType("audio/mpeg") isnt ""
+  constructor: (@data = {}) ->
 
 class Loading
 
@@ -148,16 +186,16 @@ class Delegate
         @onError("Timeout")
       , 3000
       $.ajax
-        url: "https://www.google.com/dictionary/json"
-        dataType: "jsonp",
+        url: "https://www.googleapis.com/scribe/v1/research"
+        dataType: "jsonp"
         data:
-          q: @query,
-          sl: @language,
-          tl: @language,
-          restrict: "pr,de,sy"
-        success: (data) =>
+          key: Key
+          dataset: "dictionary"
+          dictionaryLanguage: @language
+          query: @query
+        success: (json) =>
           clearTimeout(@timeout) if nonce is @nonce and @timeout
-          @onData(data) if nonce is @nonce
+          @onData(json.data) if nonce is @nonce and json.responseHandled is true
     return
 
   onData: (data)->
@@ -193,7 +231,6 @@ settings = if settings? then JSON.parse settings else
   options:
     examples: true
     synonyms: true
-    webDefinitions: false
 
 title = document.title
 
@@ -212,8 +249,6 @@ window.onhashchange = ->
     dictionary.submit query if dictionary.query isnt query or dictionary.language isnt currentLanguage
   return
 
-player = new MP3Player()
-
 loading = new Loading()
 
 dictionary = new Delegate
@@ -228,7 +263,7 @@ dictionary = new Delegate
     return
 
   onSubmit: ->
-    $("#query").val @query
+    $("#query").blur().val @query
     location.href = "#" + @query + separator + @language
     if @query is ""
       $("#dictionary").hide()
@@ -243,33 +278,25 @@ dictionary = new Delegate
       true
 
   onData: (data) ->
-    $("#dictionary").html new Dictionary(data).filter("synonyms", "primaries", "webDefinitions").toHtml()
-    $("#dictionary>.synonyms>.terms>.text")[0].innerHTML = $("#dictionary>.primaries>.terms>.text")[0].innerHTML if $("#dictionary>.synonyms>.terms>.text")[0]? and $("#dictionary>.primaries>.terms>.text")[0]?
-    $("#dictionary a.sound").click (event) ->
-      event.preventDefault()
-      player.play $(@).attr "href"
-      return
-    $("#dictionary .synonyms>.related>.terms>span.text").click ->
+    $("#dictionary").empty().append new Dictionary(data).toHTMLElement()
+    $("#dictionary a.synonym").click (event) ->
       dictionary.submit $(@).text()
       return
-    $("#dictionary>.webDefinitions a").each ->
-      nextlink = $(@).parent().next(".meaning").children "a"
-      $(@).hide() if $(@).text() is nextlink.text()
-      return
-    $("#dictionary .synonyms>.related").hide() if !settings.options.synonyms
-    $("#dictionary .example").hide() if !settings.options.examples
-    $("#dictionary .webDefinitions").hide() if !settings.options.webDefinitions
+    for option, value of settings.options
+      $("#dictionary ul.#{option}").hide() if value is false
     $("#dictionary").show()
     loading.stop()
     return
 
   onError: (error) ->
+    ###
     $("#dictionary").hide().html("""
     404. <span style="color: gray;">That's an error.</span><br>
     <br>
     Google is doing evil.<br>
     <span style="color: gray;">That's all I know.</span>
     """).fadeIn()
+    ###
     return
 
 $(document).ready ->
@@ -279,28 +306,23 @@ $(document).ready ->
     option.selected = true if key is dictionary.language
     document.getElementById("language").add option, null
 
-  for option, status of settings.options
-    $("##{option}").addClass "active" if status
-
   window.onhashchange() if location.hash
 
   $("#language").change ->
     dictionary.changeLanguage $(@).val()
+    return
+
+  for option, status of settings.options
+    $("##{option}").addClass "active" if status
+    do (option) ->
+      $("##{option}").click ->
+        settings.options[option] = !settings.options[option]
+        $("#dictionary ul.#{option}").toggle()
+        return
 
   $("#toggle-options").click ->
     $("#options-wrapper").toggle()
-
-  $("#synonyms").click ->
-    settings.options.synonyms = !settings.options.synonyms
-    $(".synonyms>.related").toggle()
-
-  $("#examples").click ->
-    settings.options.examples = !settings.options.examples
-    $(".example").toggle()
-
-  $("#webDefinitions").click ->
-    settings.options.webDefinitions = !settings.options.webDefinitions
-    $(".webDefinitions").toggle()
+    return
 
   nonce = 0
   lastSubmitNonce = nonce
