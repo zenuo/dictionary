@@ -186,7 +186,7 @@ class Delegate
         @onError("Timeout")
       , 3000
       $.ajax
-        url: "https://www.googleapis.com/scribe/v1/research"
+        url: "//www.googleapis.com/scribe/v1/research"
         dataType: "jsonp"
         data:
           key: Key
@@ -337,7 +337,7 @@ $(document).ready ->
       ajaxACRequestNonce = nonce++
       lastAjaxACRequestNonce = ajaxACRequestNonce
       $.ajax
-        url: "http://" + dictionary.language.substr(0, 2) + ".wiktionary.org/w/api.php"
+        url: "//" + dictionary.language.substr(0, 2) + ".wiktionary.org/w/api.php"
         dataType: "jsonp"
         data:
           search: query
