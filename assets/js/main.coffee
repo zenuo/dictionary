@@ -103,6 +103,30 @@ class Dictionary
                                 class: "example"
                               }, exampleData
                             examples
+                        if submeaningData.synonyms
+                          submeaning.appendChild @createElement "ul", {
+                            class: "synonyms"
+                          }, do (synonymsData = submeaningData.synonyms) =>
+                            synonyms = []
+                            for synonymData in synonymsData
+                              synonyms.push @createElement "li", {
+                                class: "synonym"
+                              }, [ @createElement "a", {
+                                class: "synonym"
+                              }, synonymData.nym ]
+                            synonyms
+                        if submeaningData.antonyms
+                          submeaning.appendChild @createElement "ul", {
+                            class: "antonyms"
+                          }, do (antonymsData = submeaningData.antonyms) =>
+                            antonyms = []
+                            for antonymData in antonymsData
+                              antonyms.push @createElement "li", {
+                                class: "antonym"
+                              }, [ @createElement "a", {
+                                class: "antonym"
+                              }, antonymData.nym ]
+                            antonyms
                         submeanings.push submeaning
                       submeanings
                   if meaningData.synonyms
@@ -117,6 +141,18 @@ class Dictionary
                           class: "synonym"
                         }, synonymData.nym ]
                       synonyms
+                  if meaningData.antonyms
+                    meaning.appendChild @createElement "ul", {
+                      class: "antonyms"
+                    }, do (antonymsData = meaningData.antonyms) =>
+                      antonyms = []
+                      for antonymData in antonymsData
+                        antonyms.push @createElement "li", {
+                          class: "antonym"
+                        }, [ @createElement "a", {
+                          class: "antonym"
+                        }, antonymData.nym ]
+                      antonyms
                   meanings.push meaning
                 meanings
             definition
@@ -186,7 +222,7 @@ class Delegate
         @onError("Timeout")
       , 3000
       $.ajax
-        url: "//www.googleapis.com/scribe/v1/research"
+        url: "https://www.googleapis.com/scribe/v1/research"
         dataType: "jsonp"
         data:
           key: Key
@@ -279,7 +315,7 @@ dictionary = new Delegate
 
   onData: (data) ->
     $("#dictionary").empty().append new Dictionary(data).toHTMLElement()
-    $("#dictionary a.synonym").click (event) ->
+    $("#dictionary a.synonym, #dictionary a.antonym").click (event) ->
       dictionary.submit $(@).text()
       return
     for option, value of settings.options
@@ -318,6 +354,7 @@ $(document).ready ->
       $("##{option}").click ->
         settings.options[option] = !settings.options[option]
         $("#dictionary ul.#{option}").toggle()
+        $("#dictionary ul.antonyms").toggle() if option is "synonyms"
         return
 
   $("#toggle-options").click ->

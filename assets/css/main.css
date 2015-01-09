@@ -129,7 +129,7 @@ header > div > p > br {
   }
 }
 .dictionary {
-  margin: 1em 5.555555555555555%;
+  margin: 1em 5.55555556%;
 }
 .dictionary div.displayName {
   font-size: 2em;
@@ -170,29 +170,52 @@ header > div > p > br {
 .dictionary div.definition ol.meanings li.meaning ul.examples li.example {
   color: #767676;
 }
-.dictionary div.definition ol.meanings li.meaning ul.synonyms {
+.dictionary div.definition ol.meanings li.meaning ul.synonyms,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms {
   list-style-type: none;
   margin: 0;
 }
-.dictionary div.definition ol.meanings li.meaning ul.synonyms:before {
-  content: "synonym: ";
+.dictionary div.definition ol.meanings li.meaning ul.synonyms:before,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms:before {
   color: #888888;
   font-style: italic;
 }
-.dictionary div.definition ol.meanings li.meaning ul.synonyms li.synonym {
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.synonym,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.synonym,
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.antonym,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.antonym {
   display: inline;
 }
-.dictionary div.definition ol.meanings li.meaning ul.synonyms li.synonym a.synonym {
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.synonym a.synonym,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.synonym a.synonym,
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.antonym a.synonym,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.antonym a.synonym,
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.synonym a.antonym,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.synonym a.antonym,
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.antonym a.antonym,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.antonym a.antonym {
   color: #555555;
   text-decoration: underline;
   cursor: pointer;
 }
-.dictionary div.definition ol.meanings li.meaning ul.synonyms li.synonym:after {
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.synonym:after,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.synonym:after,
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.antonym:after,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.antonym:after {
   content: ", ";
 }
-.dictionary div.definition ol.meanings li.meaning ul.synonyms li.synonym:last-child:after {
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.synonym:last-child:after,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.synonym:last-child:after,
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.antonym:last-child:after,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.antonym:last-child:after {
   content: "";
   content: none;
+}
+.dictionary div.definition ol.meanings li.meaning ul.synonyms:before {
+  content: "synonym: ";
+}
+.dictionary div.definition ol.meanings li.meaning ul.antonyms:before {
+  content: "antonym: ";
 }
 .dictionary div.definition ol.meanings li.meaning ol.submeanings {
   display: none;

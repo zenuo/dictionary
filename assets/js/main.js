@@ -146,6 +146,44 @@
                                 return examples;
                               })(submeaningData.examples)));
                             }
+                            if (submeaningData.synonyms) {
+                              submeaning.appendChild(_this.createElement("ul", {
+                                "class": "synonyms"
+                              }, (function(synonymsData) {
+                                var synonymData, synonyms, _len5, _n;
+                                synonyms = [];
+                                for (_n = 0, _len5 = synonymsData.length; _n < _len5; _n++) {
+                                  synonymData = synonymsData[_n];
+                                  synonyms.push(_this.createElement("li", {
+                                    "class": "synonym"
+                                  }, [
+                                    _this.createElement("a", {
+                                      "class": "synonym"
+                                    }, synonymData.nym)
+                                  ]));
+                                }
+                                return synonyms;
+                              })(submeaningData.synonyms)));
+                            }
+                            if (submeaningData.antonyms) {
+                              submeaning.appendChild(_this.createElement("ul", {
+                                "class": "antonyms"
+                              }, (function(antonymsData) {
+                                var antonymData, antonyms, _len5, _n;
+                                antonyms = [];
+                                for (_n = 0, _len5 = antonymsData.length; _n < _len5; _n++) {
+                                  antonymData = antonymsData[_n];
+                                  antonyms.push(_this.createElement("li", {
+                                    "class": "antonym"
+                                  }, [
+                                    _this.createElement("a", {
+                                      "class": "antonym"
+                                    }, antonymData.nym)
+                                  ]));
+                                }
+                                return antonyms;
+                              })(submeaningData.antonyms)));
+                            }
                             submeanings.push(submeaning);
                           }
                           return submeanings;
@@ -169,6 +207,25 @@
                           }
                           return synonyms;
                         })(meaningData.synonyms)));
+                      }
+                      if (meaningData.antonyms) {
+                        meaning.appendChild(_this.createElement("ul", {
+                          "class": "antonyms"
+                        }, (function(antonymsData) {
+                          var antonymData, antonyms, _len4, _m;
+                          antonyms = [];
+                          for (_m = 0, _len4 = antonymsData.length; _m < _len4; _m++) {
+                            antonymData = antonymsData[_m];
+                            antonyms.push(_this.createElement("li", {
+                              "class": "antonym"
+                            }, [
+                              _this.createElement("a", {
+                                "class": "antonym"
+                              }, antonymData.nym)
+                            ]));
+                          }
+                          return antonyms;
+                        })(meaningData.antonyms)));
                       }
                       meanings.push(meaning);
                     }
@@ -276,7 +333,7 @@
           };
         })(this), 3000);
         $.ajax({
-          url: "//www.googleapis.com/scribe/v1/research",
+          url: "https://www.googleapis.com/scribe/v1/research",
           dataType: "jsonp",
           data: {
             key: Key,
@@ -396,7 +453,7 @@
     onData: function(data) {
       var option, value, _ref;
       $("#dictionary").empty().append(new Dictionary(data).toHTMLElement());
-      $("#dictionary a.synonym").click(function(event) {
+      $("#dictionary a.synonym, #dictionary a.antonym").click(function(event) {
         dictionary.submit($(this).text());
       });
       _ref = settings.options;
@@ -444,6 +501,9 @@
       return $("#" + option).click(function() {
         settings.options[option] = !settings.options[option];
         $("#dictionary ul." + option).toggle();
+        if (option === "synonyms") {
+          $("#dictionary ul.antonyms").toggle();
+        }
       });
     };
     for (option in _ref1) {

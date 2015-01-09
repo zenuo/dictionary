@@ -61,20 +61,22 @@
           }
         }
 
-        ul.synonyms {
+        ul.synonyms,
+        ul.antonyms {
           list-style-type: none;
           margin: 0;
 
           &:before {
-            content: "synonym: ";
             color: #888888;
             font-style: italic;
           }
 
-          li.synonym {
+          li.synonym,
+          li.antonym {
             display: inline;
 
-            a.synonym {
+            a.synonym,
+            a.antonym {
               color: #555555;
               text-decoration: underline;
               cursor: pointer;
@@ -91,6 +93,12 @@
               }
             }
           }
+        }
+        ul.synonyms:before {
+          content: "synonym: ";
+        }
+        ul.antonyms:before {
+          content: "antonym: ";
         }
 
         ol.submeanings {
