@@ -71,15 +71,20 @@
             font-style: italic;
           }
 
-          li.synonym,
-          li.antonym {
+          li.nym {
             display: inline;
 
-            a.synonym,
-            a.antonym {
+            a.nym {
               color: #555555;
-              text-decoration: underline;
-              cursor: pointer;
+
+              &:hover {
+                text-decoration: inherit;
+              }
+
+              &[href] {
+                text-decoration: underline;
+                cursor: pointer;
+              }
             }
 
             &:after {

@@ -180,34 +180,29 @@ header > div > p > br {
   color: #888888;
   font-style: italic;
 }
-.dictionary div.definition ol.meanings li.meaning ul.synonyms li.synonym,
-.dictionary div.definition ol.meanings li.meaning ul.antonyms li.synonym,
-.dictionary div.definition ol.meanings li.meaning ul.synonyms li.antonym,
-.dictionary div.definition ol.meanings li.meaning ul.antonyms li.antonym {
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.nym,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.nym {
   display: inline;
 }
-.dictionary div.definition ol.meanings li.meaning ul.synonyms li.synonym a.synonym,
-.dictionary div.definition ol.meanings li.meaning ul.antonyms li.synonym a.synonym,
-.dictionary div.definition ol.meanings li.meaning ul.synonyms li.antonym a.synonym,
-.dictionary div.definition ol.meanings li.meaning ul.antonyms li.antonym a.synonym,
-.dictionary div.definition ol.meanings li.meaning ul.synonyms li.synonym a.antonym,
-.dictionary div.definition ol.meanings li.meaning ul.antonyms li.synonym a.antonym,
-.dictionary div.definition ol.meanings li.meaning ul.synonyms li.antonym a.antonym,
-.dictionary div.definition ol.meanings li.meaning ul.antonyms li.antonym a.antonym {
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.nym a.nym,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.nym a.nym {
   color: #555555;
+}
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.nym a.nym:hover,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.nym a.nym:hover {
+  text-decoration: inherit;
+}
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.nym a.nym[href],
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.nym a.nym[href] {
   text-decoration: underline;
   cursor: pointer;
 }
-.dictionary div.definition ol.meanings li.meaning ul.synonyms li.synonym:after,
-.dictionary div.definition ol.meanings li.meaning ul.antonyms li.synonym:after,
-.dictionary div.definition ol.meanings li.meaning ul.synonyms li.antonym:after,
-.dictionary div.definition ol.meanings li.meaning ul.antonyms li.antonym:after {
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.nym:after,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.nym:after {
   content: ", ";
 }
-.dictionary div.definition ol.meanings li.meaning ul.synonyms li.synonym:last-child:after,
-.dictionary div.definition ol.meanings li.meaning ul.antonyms li.synonym:last-child:after,
-.dictionary div.definition ol.meanings li.meaning ul.synonyms li.antonym:last-child:after,
-.dictionary div.definition ol.meanings li.meaning ul.antonyms li.antonym:last-child:after {
+.dictionary div.definition ol.meanings li.meaning ul.synonyms li.nym:last-child:after,
+.dictionary div.definition ol.meanings li.meaning ul.antonyms li.nym:last-child:after {
   content: "";
   content: none;
 }

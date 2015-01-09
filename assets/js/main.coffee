@@ -6,7 +6,7 @@ class Dictionary
 
   createElement: (tag, attributes, children) ->
     element = document.createElement tag
-    element.setAttribute name, value for name, value of attributes
+    element.setAttribute name, value for name, value of attributes when value?
     if children instanceof Array
       element.appendChild child for child in children
     else if "[object String]" is Object.prototype.toString.call children
@@ -110,9 +110,10 @@ class Dictionary
                             synonyms = []
                             for synonymData in synonymsData
                               synonyms.push @createElement "li", {
-                                class: "synonym"
+                                class: "nym"
                               }, [ @createElement "a", {
-                                class: "synonym"
+                                class: "nym"
+                                href: if synonymData.nymResult?.query then "##{synonymData.nymResult.query}" else null
                               }, synonymData.nym ]
                             synonyms
                         if submeaningData.antonyms
@@ -122,9 +123,10 @@ class Dictionary
                             antonyms = []
                             for antonymData in antonymsData
                               antonyms.push @createElement "li", {
-                                class: "antonym"
+                                class: "nym"
                               }, [ @createElement "a", {
-                                class: "antonym"
+                                class: "nym"
+                                href: if antonymData.nymResult?.query then "##{antonymData.nymResult.query}" else null
                               }, antonymData.nym ]
                             antonyms
                         submeanings.push submeaning
@@ -136,9 +138,10 @@ class Dictionary
                       synonyms = []
                       for synonymData in synonymsData
                         synonyms.push @createElement "li", {
-                          class: "synonym"
+                          class: "nym"
                         }, [ @createElement "a", {
-                          class: "synonym"
+                          class: "nym"
+                          href: if synonymData.nymResult?.query then "##{synonymData.nymResult.query}" else null
                         }, synonymData.nym ]
                       synonyms
                   if meaningData.antonyms
@@ -148,9 +151,10 @@ class Dictionary
                       antonyms = []
                       for antonymData in antonymsData
                         antonyms.push @createElement "li", {
-                          class: "antonym"
+                          class: "nym"
                         }, [ @createElement "a", {
-                          class: "antonym"
+                          class: "nym"
+                          href: if antonymData.nymResult?.query then "##{antonymData.nymResult.query}" else null
                         }, antonymData.nym ]
                       antonyms
                   meanings.push meaning
@@ -315,8 +319,9 @@ dictionary = new Delegate
 
   onData: (data) ->
     $("#dictionary").empty().append new Dictionary(data).toHTMLElement()
-    $("#dictionary a.synonym, #dictionary a.antonym").click (event) ->
-      dictionary.submit $(@).text()
+    $("#dictionary a.nym").click (event) ->
+      event.preventDefault()
+      dictionary.submit $(@).attr("href").replace(/^#/, "")
       return
     for option, value of settings.options
       $("#dictionary ul.#{option}").hide() if value is false

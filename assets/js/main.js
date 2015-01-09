@@ -11,7 +11,9 @@
       element = document.createElement(tag);
       for (name in attributes) {
         value = attributes[name];
-        element.setAttribute(name, value);
+        if (value != null) {
+          element.setAttribute(name, value);
+        }
       }
       if (children instanceof Array) {
         for (_i = 0, _len = children.length; _i < _len; _i++) {
@@ -150,15 +152,16 @@
                               submeaning.appendChild(_this.createElement("ul", {
                                 "class": "synonyms"
                               }, (function(synonymsData) {
-                                var synonymData, synonyms, _len5, _n;
+                                var synonymData, synonyms, _len5, _n, _ref2;
                                 synonyms = [];
                                 for (_n = 0, _len5 = synonymsData.length; _n < _len5; _n++) {
                                   synonymData = synonymsData[_n];
                                   synonyms.push(_this.createElement("li", {
-                                    "class": "synonym"
+                                    "class": "nym"
                                   }, [
                                     _this.createElement("a", {
-                                      "class": "synonym"
+                                      "class": "nym",
+                                      href: ((_ref2 = synonymData.nymResult) != null ? _ref2.query : void 0) ? "#" + synonymData.nymResult.query : null
                                     }, synonymData.nym)
                                   ]));
                                 }
@@ -169,15 +172,16 @@
                               submeaning.appendChild(_this.createElement("ul", {
                                 "class": "antonyms"
                               }, (function(antonymsData) {
-                                var antonymData, antonyms, _len5, _n;
+                                var antonymData, antonyms, _len5, _n, _ref2;
                                 antonyms = [];
                                 for (_n = 0, _len5 = antonymsData.length; _n < _len5; _n++) {
                                   antonymData = antonymsData[_n];
                                   antonyms.push(_this.createElement("li", {
-                                    "class": "antonym"
+                                    "class": "nym"
                                   }, [
                                     _this.createElement("a", {
-                                      "class": "antonym"
+                                      "class": "nym",
+                                      href: ((_ref2 = antonymData.nymResult) != null ? _ref2.query : void 0) ? "#" + antonymData.nymResult.query : null
                                     }, antonymData.nym)
                                   ]));
                                 }
@@ -193,15 +197,16 @@
                         meaning.appendChild(_this.createElement("ul", {
                           "class": "synonyms"
                         }, (function(synonymsData) {
-                          var synonymData, synonyms, _len4, _m;
+                          var synonymData, synonyms, _len4, _m, _ref2;
                           synonyms = [];
                           for (_m = 0, _len4 = synonymsData.length; _m < _len4; _m++) {
                             synonymData = synonymsData[_m];
                             synonyms.push(_this.createElement("li", {
-                              "class": "synonym"
+                              "class": "nym"
                             }, [
                               _this.createElement("a", {
-                                "class": "synonym"
+                                "class": "nym",
+                                href: ((_ref2 = synonymData.nymResult) != null ? _ref2.query : void 0) ? "#" + synonymData.nymResult.query : null
                               }, synonymData.nym)
                             ]));
                           }
@@ -212,15 +217,16 @@
                         meaning.appendChild(_this.createElement("ul", {
                           "class": "antonyms"
                         }, (function(antonymsData) {
-                          var antonymData, antonyms, _len4, _m;
+                          var antonymData, antonyms, _len4, _m, _ref2;
                           antonyms = [];
                           for (_m = 0, _len4 = antonymsData.length; _m < _len4; _m++) {
                             antonymData = antonymsData[_m];
                             antonyms.push(_this.createElement("li", {
-                              "class": "antonym"
+                              "class": "nym"
                             }, [
                               _this.createElement("a", {
-                                "class": "antonym"
+                                "class": "nym",
+                                href: ((_ref2 = antonymData.nymResult) != null ? _ref2.query : void 0) ? "#" + antonymData.nymResult.query : null
                               }, antonymData.nym)
                             ]));
                           }
@@ -453,8 +459,9 @@
     onData: function(data) {
       var option, value, _ref;
       $("#dictionary").empty().append(new Dictionary(data).toHTMLElement());
-      $("#dictionary a.synonym, #dictionary a.antonym").click(function(event) {
-        dictionary.submit($(this).text());
+      $("#dictionary a.nym").click(function(event) {
+        event.preventDefault();
+        dictionary.submit($(this).attr("href").replace(/^#/, ""));
       });
       _ref = settings.options;
       for (option in _ref) {
