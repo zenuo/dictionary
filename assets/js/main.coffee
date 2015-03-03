@@ -234,8 +234,12 @@ class Delegate
           dictionaryLanguage: @language
           query: @query
         success: (json) =>
-          clearTimeout(@timeout) if nonce is @nonce and @timeout
-          @onData(json.data) if nonce is @nonce and json.responseHandled is true
+          clearTimeout @timeout if nonce is @nonce and @timeout
+          if nonce is @nonce
+            if json.responseHandled is true
+              @onData json.data
+            else if json.error
+              @onError json.error
     return
 
   onData: (data)->
@@ -330,14 +334,13 @@ dictionary = new Delegate
     return
 
   onError: (error) ->
-    ###
+    loading.stop()
     $("#dictionary").hide().html("""
-    404. <span style="color: gray;">That's an error.</span><br>
+    #{error.code}. <span style="color: gray;">That's an error.</span><br>
     <br>
-    Google is doing evil.<br>
+    #{error.message}.<br>
     <span style="color: gray;">That's all I know.</span>
     """).fadeIn()
-    ###
     return
 
 $(document).ready ->
