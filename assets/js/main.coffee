@@ -223,7 +223,9 @@ class Delegate
       nonce = ++@nonce
       clearTimeout(@timeout) if @timeout
       @timeout = setTimeout =>
-        @onError("Timeout")
+        @onError
+          code: 118
+          message: "Connection timed out"
       , 3000
       $.ajax
         url: "https://www.googleapis.com/scribe/v1/research"

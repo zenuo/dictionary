@@ -335,7 +335,10 @@
         }
         this.timeout = setTimeout((function(_this) {
           return function() {
-            return _this.onError("Timeout");
+            return _this.onError({
+              code: 118,
+              message: "Connection timed out"
+            });
           };
         })(this), 3000);
         $.ajax({
