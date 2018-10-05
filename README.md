@@ -7,7 +7,7 @@
 
 ## Based on
 ``` sh
-curl --socks5 127.0.0.1:1086\
+$ curl --socks5 127.0.0.1:1086\
     -H 'x-origin: chrome-extension://mgijmajocgfcbeboacabfgobmjgjcoja'\
     'https://content.googleapis.com/dictionaryextension/v1/knowledge/search?term=query&language=en&key=AIzaSyC9PDwo2wgENKuI8DSFOfqFqKP2cKAxxso'
 ```
