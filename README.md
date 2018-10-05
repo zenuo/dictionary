@@ -49,4 +49,4 @@ dictionary |ˈdɪkʃ(ə)n(ə)ri|
      • the dictionary definition of ‘smile’
 ```
 
-*Thanks for your intrest :)*
+*Thanks for your interest :)*
