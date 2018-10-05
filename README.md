@@ -9,16 +9,16 @@
 ``` sh
 curl --socks5 127.0.0.1:1086\
     -H 'x-origin: chrome-extension://mgijmajocgfcbeboacabfgobmjgjcoja'\
-    'https://content.googleapis.com/dictionaryextension/v1/knowledge/search?term=query&language=en&key=AIzaSyC9PDwo2wgENKuI8DSFOfqFqKP2cKAxxso' 
+    'https://content.googleapis.com/dictionaryextension/v1/knowledge/search?term=query&language=en&key=AIzaSyC9PDwo2wgENKuI8DSFOfqFqKP2cKAxxso'
 ```
 
 ## Requirements
 Because of [Great Firewall](https://en.wikipedia.org/wiki/Great_Firewall), we have to request Google API over a proxy. 
 
-This script use [socks5](https://en.wikipedia.org/wiki/SOCKS#SOCKS5) as the proxy, Install (PySocks)[https://github.com/Anorov/PySocks] :
+This script use [socks5](https://en.wikipedia.org/wiki/SOCKS#SOCKS5) as the proxy, Install [PySocks](https://github.com/Anorov/PySocks) :
 
 ```sh
-pip3 install -U pysocks
+$ sudo pip3 install -U pysocks
 ```
 
 and, edit script to your proxy setting:
