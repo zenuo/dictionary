@@ -1,0 +1,1368 @@
+{
+ "dictionaryData": [
+  {
+   "entries": [
+    {
+     "locale": "en",
+     "headword": "love",
+     "etymology": {
+      "etymology": {
+       "fragments": [
+        {
+         "text": "Old English \u003ci\u003elufu\u003c/i\u003e, of Germanic origin; from an Indo-European root shared by Sanskrit \u003ci\u003elubhyati\u003c/i\u003e ‘desires’, Latin \u003ci\u003elibet\u003c/i\u003e ‘it is pleasing’, \u003ci\u003elibido\u003c/i\u003e ‘desire’, also by "
+        },
+        {
+         "text": "leave",
+         "isEntryLink": true
+        },
+        {
+         "text": "\u003csup\u003e2\u003c/sup\u003e"
+        },
+        {
+         "text": " and "
+        },
+        {
+         "text": "lief",
+         "isEntryLink": true
+        },
+        {
+         "text": "."
+        }
+       ],
+       "text": "Old English \u003ci\u003elufu\u003c/i\u003e, of Germanic origin; from an Indo-European root shared by Sanskrit \u003ci\u003elubhyati\u003c/i\u003e ‘desires’, Latin \u003ci\u003elibet\u003c/i\u003e ‘it is pleasing’, \u003ci\u003elibido\u003c/i\u003e ‘desire’, also by leave\u003csup\u003e2\u003c/sup\u003e and lief."
+      },
+      "images": {
+       "desktop": {
+        "width": 262,
+        "height": 40,
+        "url": "etymology/en/desktop/d0b24e38772b136b214acd2d8a3cd563c302c300a8fcee702a85cb6e87d6df86.png"
+       },
+       "mobile": {
+        "width": 187,
+        "height": 320,
+        "url": "etymology/en/mobile/d0b24e38772b136b214acd2d8a3cd563c302c300a8fcee702a85cb6e87d6df86.png"
+       },
+       "tablet": {
+        "width": 673,
+        "height": 84,
+        "url": "etymology/en/tablet/d0b24e38772b136b214acd2d8a3cd563c302c300a8fcee702a85cb6e87d6df86.png"
+       }
+      }
+     },
+     "phonetics": [
+      {
+       "text": "lʌv",
+       "oxfordAudio": "//ssl.gstatic.com/dictionary/static/sounds/20160317/love--_gb_1.mp3"
+      }
+     ],
+     "senseFamilies": [
+      {
+       "partsOfSpeechs": [
+        {
+         "value": "noun"
+        }
+       ],
+       "morphUnits": [
+        {
+         "wordForm": "love",
+         "formType": {
+          "posTag": "NN",
+          "description": "noun"
+         }
+        },
+        {
+         "wordForm": "loves",
+         "formType": {
+          "posTag": "NNS",
+          "description": "plural noun"
+         }
+        }
+       ],
+       "senses": [
+        {
+         "definition": {
+          "fragments": [
+           {
+            "text": "a strong feeling of affection."
+           }
+          ],
+          "text": "a strong feeling of affection."
+         },
+         "conciseDefinition": "strong feeling of affection",
+         "exampleGroups": [
+          {
+           "examples": [
+            "babies fill parents with intense feelings of love"
+           ]
+          },
+          {
+           "examples": [
+            "their \u003cb\u003elove for\u003c/b\u003e their country"
+           ]
+          }
+         ],
+         "semanticClasses": [
+          "liking"
+         ],
+         "thesaurusEntries": [
+          {
+           "headword": "love",
+           "synonyms": [
+            {
+             "nyms": [
+              {
+               "nym": "deep affection",
+               "numEntries": 0,
+               "isCore": true
+              },
+              {
+               "nym": "fondness",
+               "numEntries": 1
+              },
+              {
+               "nym": "tenderness",
+               "numEntries": 1
+              },
+              {
+               "nym": "warmth",
+               "numEntries": 1
+              },
+              {
+               "nym": "intimacy",
+               "numEntries": 1
+              },
+              {
+               "nym": "attachment",
+               "numEntries": 1
+              },
+              {
+               "nym": "endearment",
+               "numEntries": 1
+              }
+             ]
+            },
+            {
+             "nyms": [
+              {
+               "nym": "devotion",
+               "numEntries": 1
+              },
+              {
+               "nym": "adoration",
+               "numEntries": 1
+              },
+              {
+               "nym": "doting",
+               "numEntries": 1
+              },
+              {
+               "nym": "idolization",
+               "numEntries": 0
+              },
+              {
+               "nym": "worship",
+               "numEntries": 1
+              }
+             ]
+            },
+            {
+             "nyms": [
+              {
+               "nym": "passion",
+               "numEntries": 1
+              },
+              {
+               "nym": "ardour",
+               "numEntries": 1
+              },
+              {
+               "nym": "desire",
+               "numEntries": 1
+              },
+              {
+               "nym": "lust",
+               "numEntries": 1
+              },
+              {
+               "nym": "yearning",
+               "numEntries": 1
+              },
+              {
+               "nym": "infatuation",
+               "numEntries": 1
+              },
+              {
+               "nym": "adulation",
+               "numEntries": 1
+              },
+              {
+               "nym": "besottedness",
+               "numEntries": 0
+              }
+             ]
+            }
+           ],
+           "antonyms": [
+            {
+             "nyms": [
+              {
+               "nym": "hatred",
+               "numEntries": 1
+              }
+             ]
+            }
+           ],
+           "examples": [
+            "his friendship with Helen grew into love",
+            "she has a great love for her children"
+           ]
+          },
+          {
+           "headword": "love",
+           "synonyms": [
+            {
+             "nyms": [
+              {
+               "nym": "compassion",
+               "numEntries": 1,
+               "isCore": true
+              },
+              {
+               "nym": "care",
+               "numEntries": 1
+              },
+              {
+               "nym": "caring",
+               "numEntries": 1
+              },
+              {
+               "nym": "regard",
+               "numEntries": 1
+              },
+              {
+               "nym": "solicitude",
+               "numEntries": 1
+              },
+              {
+               "nym": "concern",
+               "numEntries": 1
+              },
+              {
+               "nym": "warmth",
+               "numEntries": 1
+              },
+              {
+               "nym": "friendliness",
+               "numEntries": 1
+              },
+              {
+               "nym": "friendship",
+               "numEntries": 1
+              },
+              {
+               "nym": "kindness",
+               "numEntries": 1
+              },
+              {
+               "nym": "charity",
+               "numEntries": 1
+              },
+              {
+               "nym": "goodwill",
+               "numEntries": 1
+              },
+              {
+               "nym": "sympathy",
+               "numEntries": 1
+              },
+              {
+               "nym": "kindliness",
+               "numEntries": 1
+              },
+              {
+               "nym": "altruism",
+               "numEntries": 1
+              },
+              {
+               "nym": "philanthropy",
+               "numEntries": 1
+              },
+              {
+               "nym": "unselfishness",
+               "numEntries": 0
+              },
+              {
+               "nym": "benevolence",
+               "numEntries": 1
+              },
+              {
+               "nym": "brotherliness",
+               "numEntries": 0
+              },
+              {
+               "nym": "sisterliness",
+               "numEntries": 0
+              },
+              {
+               "nym": "fellow feeling",
+               "numEntries": 1
+              },
+              {
+               "nym": "humanity",
+               "numEntries": 1
+              }
+             ]
+            }
+           ],
+           "examples": [
+            "their love for their fellow human beings"
+           ]
+          },
+          {
+           "headword": "love",
+           "synonyms": [
+            {
+             "nyms": [
+              {
+               "nym": "relationship",
+               "numEntries": 1,
+               "isCore": true
+              },
+              {
+               "nym": "love affair",
+               "numEntries": 1,
+               "isCore": true
+              },
+              {
+               "nym": "affair",
+               "numEntries": 1
+              },
+              {
+               "nym": "romance",
+               "numEntries": 1
+              },
+              {
+               "nym": "liaison",
+               "numEntries": 1
+              },
+              {
+               "nym": "affair of the heart",
+               "numEntries": 0
+              },
+              {
+               "nym": "intrigue",
+               "numEntries": 1
+              },
+              {
+               "nym": "amour",
+               "numEntries": 1
+              }
+             ]
+            }
+           ],
+           "examples": [
+            "he is confident that their love can survive"
+           ]
+          }
+         ],
+         "subsenses": [
+          {
+           "definition": {
+            "fragments": [
+             {
+              "text": "a strong feeling of affection and sexual attraction for someone."
+             }
+            ],
+            "text": "a strong feeling of affection and sexual attraction for someone."
+           },
+           "conciseDefinition": "strong feeling of affection and sexual attraction",
+           "exampleGroups": [
+            {
+             "examples": [
+              "they were both \u003cb\u003ein love with\u003c/b\u003e her"
+             ]
+            },
+            {
+             "examples": [
+              "we were slowly \u003cb\u003efalling in love\u003c/b\u003e"
+             ]
+            }
+           ],
+           "semanticClasses": [
+            "love"
+           ],
+           "thesaurusEntries": [
+            {
+             "headword": "in love with",
+             "synonyms": [
+              {
+               "nyms": [
+                {
+                 "nym": "besotted with",
+                 "numEntries": 0,
+                 "isCore": true
+                },
+                {
+                 "nym": "infatuated with",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "enamoured of",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "love-struck by",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "smitten with",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "passionate about",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "with a passion for",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "consumed with desire for",
+                 "numEntries": 0
+                }
+               ]
+              },
+              {
+               "nyms": [
+                {
+                 "nym": "captivated by",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "bewitched by",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "enthralled by",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "entranced by",
+                 "numEntries": 0
+                }
+               ]
+              },
+              {
+               "nyms": [
+                {
+                 "nym": "devoted to",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "doting on",
+                 "numEntries": 0
+                }
+               ]
+              },
+              {
+               "register": "informal",
+               "nyms": [
+                {
+                 "nym": "mad/crazy/nuts/wild/potty about",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "bowled over by",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "carrying a torch for",
+                 "numEntries": 0
+                }
+               ]
+              },
+              {
+               "register": "informal",
+               "nyms": [
+                {
+                 "nym": "twitterpated by",
+                 "numEntries": 0
+                }
+               ]
+              }
+             ],
+             "examples": [
+              "I'm in love with Gillian"
+             ]
+            }
+           ]
+          },
+          {
+           "definition": {
+            "fragments": [
+             {
+              "text": "affectionate greetings conveyed to someone on one's behalf."
+             }
+            ],
+            "text": "affectionate greetings conveyed to someone on one's behalf."
+           },
+           "conciseDefinition": "affectionate greetings",
+           "exampleGroups": [
+            {
+             "examples": [
+              "give her my love"
+             ]
+            }
+           ],
+           "semanticClasses": [
+            "greeting"
+           ],
+           "thesaurusEntries": [
+            {
+             "headword": "love",
+             "synonyms": [
+              {
+               "nyms": [
+                {
+                 "nym": "best wishes",
+                 "numEntries": 0,
+                 "isCore": true
+                },
+                {
+                 "nym": "regards",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "good wishes",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "greetings",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "kind/kindest regards",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "felicitations",
+                 "numEntries": 1
+                },
+                {
+                 "nym": "salutations",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "compliments",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "best",
+                 "numEntries": 1
+                },
+                {
+                 "nym": "respects",
+                 "numEntries": 0
+                }
+               ]
+              }
+             ],
+             "examples": [
+              "my mother sends her love to you"
+             ]
+            }
+           ]
+          },
+          {
+           "definition": {
+            "fragments": [
+             {
+              "text": "a formula for ending an affectionate letter."
+             }
+            ],
+            "text": "a formula for ending an affectionate letter."
+           },
+           "conciseDefinition": "formula for ending affectionate letter",
+           "exampleGroups": [
+            {
+             "examples": [
+              "take care, lots of love, Judy"
+             ]
+            }
+           ]
+          },
+          {
+           "definition": {
+            "fragments": [
+             {
+              "text": "a personified figure of love, often represented as Cupid."
+             }
+            ],
+            "text": "a personified figure of love, often represented as Cupid."
+           },
+           "conciseDefinition": "personified figure of love",
+           "semanticClasses": [
+            "mythical being"
+           ],
+           "domainClasses": [
+            "Roman History"
+           ],
+           "morphUnits": [
+            {
+             "wordForm": "Love",
+             "formType": {
+              "posTag": "NN",
+              "description": "noun"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "definition": {
+          "fragments": [
+           {
+            "text": "a great interest and pleasure in something."
+           }
+          ],
+          "text": "a great interest and pleasure in something."
+         },
+         "conciseDefinition": "great interest and pleasure in something",
+         "exampleGroups": [
+          {
+           "examples": [
+            "his \u003cb\u003elove for\u003c/b\u003e football"
+           ]
+          },
+          {
+           "examples": [
+            "we share a \u003cb\u003elove of\u003c/b\u003e music"
+           ]
+          }
+         ],
+         "semanticClasses": [
+          "liking"
+         ],
+         "thesaurusEntries": [
+          {
+           "headword": "love",
+           "synonyms": [
+            {
+             "nyms": [
+              {
+               "nym": "liking",
+               "numEntries": 1,
+               "isCore": true
+              },
+              {
+               "nym": "weakness",
+               "numEntries": 1
+              },
+              {
+               "nym": "partiality",
+               "numEntries": 1
+              },
+              {
+               "nym": "bent",
+               "numEntries": 2
+              },
+              {
+               "nym": "leaning",
+               "numEntries": 1
+              },
+              {
+               "nym": "proclivity",
+               "numEntries": 1
+              },
+              {
+               "nym": "inclination",
+               "numEntries": 1
+              },
+              {
+               "nym": "disposition",
+               "numEntries": 1
+              }
+             ]
+            },
+            {
+             "nyms": [
+              {
+               "nym": "enjoyment",
+               "numEntries": 1
+              },
+              {
+               "nym": "appreciation",
+               "numEntries": 1
+              },
+              {
+               "nym": "soft spot",
+               "numEntries": 0
+              },
+              {
+               "nym": "taste",
+               "numEntries": 1
+              },
+              {
+               "nym": "delight",
+               "numEntries": 1
+              },
+              {
+               "nym": "relish",
+               "numEntries": 1
+              },
+              {
+               "nym": "passion",
+               "numEntries": 1
+              },
+              {
+               "nym": "zeal",
+               "numEntries": 1
+              },
+              {
+               "nym": "appetite",
+               "numEntries": 1
+              },
+              {
+               "nym": "zest",
+               "numEntries": 1
+              },
+              {
+               "nym": "enthusiasm",
+               "numEntries": 1
+              },
+              {
+               "nym": "keenness",
+               "numEntries": 1
+              },
+              {
+               "nym": "predilection",
+               "numEntries": 1
+              },
+              {
+               "nym": "penchant",
+               "numEntries": 1
+              },
+              {
+               "nym": "fondness",
+               "numEntries": 1
+              }
+             ]
+            }
+           ],
+           "examples": [
+            "her love of fashion"
+           ]
+          }
+         ]
+        },
+        {
+         "definition": {
+          "fragments": [
+           {
+            "text": "a person or thing that one loves."
+           }
+          ],
+          "text": "a person or thing that one loves."
+         },
+         "conciseDefinition": "person or thing that one loves",
+         "exampleGroups": [
+          {
+           "examples": [
+            "she was \u003cb\u003ethe love of his life\u003c/b\u003e"
+           ]
+          },
+          {
+           "examples": [
+            "their two great loves are tobacco and whisky"
+           ]
+          }
+         ],
+         "semanticClasses": [
+          "lover",
+          "liked thing"
+         ],
+         "thesaurusEntries": [
+          {
+           "headword": "love",
+           "synonyms": [
+            {
+             "nyms": [
+              {
+               "nym": "beloved",
+               "numEntries": 1,
+               "isCore": true
+              },
+              {
+               "nym": "loved one",
+               "numEntries": 1
+              },
+              {
+               "nym": "love of one's life",
+               "numEntries": 0
+              },
+              {
+               "nym": "dear",
+               "numEntries": 1
+              },
+              {
+               "nym": "dearest",
+               "numEntries": 1
+              },
+              {
+               "nym": "dear one",
+               "numEntries": 0
+              },
+              {
+               "nym": "darling",
+               "numEntries": 1
+              },
+              {
+               "nym": "sweetheart",
+               "numEntries": 1
+              },
+              {
+               "nym": "sweet",
+               "numEntries": 1
+              },
+              {
+               "nym": "sweet one",
+               "numEntries": 0
+              },
+              {
+               "nym": "angel",
+               "numEntries": 1
+              },
+              {
+               "nym": "honey",
+               "numEntries": 1
+              }
+             ]
+            },
+            {
+             "nyms": [
+              {
+               "nym": "lover",
+               "numEntries": 1
+              },
+              {
+               "nym": "boyfriend",
+               "numEntries": 1
+              },
+              {
+               "nym": "girlfriend",
+               "numEntries": 1
+              },
+              {
+               "nym": "significant other",
+               "numEntries": 1
+              },
+              {
+               "nym": "betrothed",
+               "numEntries": 1
+              },
+              {
+               "nym": "paramour",
+               "numEntries": 1
+              },
+              {
+               "nym": "inamorata",
+               "numEntries": 1
+              },
+              {
+               "nym": "inamorato",
+               "numEntries": 1
+              }
+             ]
+            },
+            {
+             "register": "informal",
+             "nyms": [
+              {
+               "nym": "boyf",
+               "numEntries": 1
+              },
+              {
+               "nym": "girlf",
+               "numEntries": 1
+              }
+             ]
+            }
+           ],
+           "examples": [
+            "don't fret, my love",
+            "he was her one and only true love"
+           ]
+          }
+         ],
+         "subsenses": [
+          {
+           "definition": {
+            "fragments": [
+             {
+              "text": "a friendly form of address."
+             }
+            ],
+            "text": "a friendly form of address."
+           },
+           "conciseDefinition": "friendly form of address",
+           "exampleGroups": [
+            {
+             "examples": [
+              "it's all right, love"
+             ]
+            }
+           ],
+           "semanticClasses": [
+            "form of address"
+           ],
+           "labelSet": {
+            "registers": [
+             "informal"
+            ],
+            "geographics": [
+             "British"
+            ]
+           }
+          },
+          {
+           "definition": {
+            "fragments": [
+             {
+              "text": "used in affectionate requests."
+             }
+            ],
+            "text": "used in affectionate requests."
+           },
+           "conciseDefinition": "used in affectionate requests",
+           "exampleGroups": [
+            {
+             "examples": [
+              "don't fret, there's a love"
+             ]
+            }
+           ],
+           "semanticClasses": [
+            "form of address"
+           ],
+           "labelSet": {
+            "registers": [
+             "informal"
+            ]
+           },
+           "morphUnits": [
+            {
+             "wordForm": "a love",
+             "formType": {
+              "posTag": "NN",
+              "description": "noun"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "definition": {
+          "fragments": [
+           {
+            "text": "(in tennis, squash, and some other sports) a score of zero; nil."
+           }
+          ],
+          "text": "(in tennis, squash, and some other sports) a score of zero; nil."
+         },
+         "conciseDefinition": "score of zero",
+         "exampleGroups": [
+          {
+           "examples": [
+            "love fifteen"
+           ]
+          }
+         ],
+         "semanticClasses": [
+          "score"
+         ],
+         "domainClasses": [
+          "Tennis"
+         ],
+         "etymology": {
+          "etymology": {
+           "fragments": [
+            {
+             "text": "[apparently from the phrase \u003ci\u003eplay for love\u003c/i\u003e (i.e. the love of the game, not for money); folk etymology has connected the word with French \u003ci\u003el'oeuf\u003c/i\u003e ‘egg’, from the resemblance in shape between an egg and a zero.]"
+            }
+           ],
+           "text": "[apparently from the phrase \u003ci\u003eplay for love\u003c/i\u003e (i.e. the love of the game, not for money); folk etymology has connected the word with French \u003ci\u003el'oeuf\u003c/i\u003e ‘egg’, from the resemblance in shape between an egg and a zero.]"
+          }
+         }
+        }
+       ]
+      },
+      {
+       "partsOfSpeechs": [
+        {
+         "value": "verb"
+        }
+       ],
+       "morphUnits": [
+        {
+         "wordForm": "love",
+         "formType": {
+          "posTag": "VB",
+          "description": "verb"
+         }
+        },
+        {
+         "wordForm": "loves",
+         "formType": {
+          "posTag": "VBZ",
+          "description": "3rd person present"
+         }
+        },
+        {
+         "wordForm": "loved",
+         "formType": {
+          "posTag": "VBD",
+          "description": "past tense"
+         }
+        },
+        {
+         "wordForm": "loved",
+         "formType": {
+          "posTag": "VBN",
+          "description": "past participle"
+         }
+        },
+        {
+         "wordForm": "loving",
+         "formType": {
+          "posTag": "VBG",
+          "description": "gerund or present participle"
+         }
+        }
+       ],
+       "senses": [
+        {
+         "definition": {
+          "fragments": [
+           {
+            "text": "feel deep affection or sexual love for (someone)."
+           }
+          ],
+          "text": "feel deep affection or sexual love for (someone)."
+         },
+         "conciseDefinition": "feel love for",
+         "exampleGroups": [
+          {
+           "examples": [
+            "do you love me?"
+           ]
+          }
+         ],
+         "thesaurusEntries": [
+          {
+           "headword": "love",
+           "synonyms": [
+            {
+             "nyms": [
+              {
+               "nym": "be in love with",
+               "numEntries": 0,
+               "isCore": true
+              },
+              {
+               "nym": "be infatuated with",
+               "numEntries": 0
+              },
+              {
+               "nym": "be smitten with",
+               "numEntries": 0
+              },
+              {
+               "nym": "be besotted with",
+               "numEntries": 0
+              },
+              {
+               "nym": "be passionate about",
+               "numEntries": 0
+              }
+             ]
+            },
+            {
+             "nyms": [
+              {
+               "nym": "care very much for",
+               "numEntries": 0,
+               "isCore": true
+              },
+              {
+               "nym": "feel deep affection for",
+               "numEntries": 0
+              },
+              {
+               "nym": "hold very dear",
+               "numEntries": 0
+              },
+              {
+               "nym": "adore",
+               "numEntries": 1
+              },
+              {
+               "nym": "think the world of",
+               "numEntries": 0
+              },
+              {
+               "nym": "be devoted to",
+               "numEntries": 0
+              },
+              {
+               "nym": "dote on",
+               "numEntries": 0
+              },
+              {
+               "nym": "cherish",
+               "numEntries": 1
+              },
+              {
+               "nym": "worship",
+               "numEntries": 1
+              },
+              {
+               "nym": "idolize",
+               "numEntries": 1
+              },
+              {
+               "nym": "treasure",
+               "numEntries": 1
+              },
+              {
+               "nym": "prize",
+               "numEntries": 2
+              }
+             ]
+            },
+            {
+             "register": "informal",
+             "nyms": [
+              {
+               "nym": "be mad/crazy/nuts/wild/potty about",
+               "numEntries": 0
+              },
+              {
+               "nym": "have a pash on",
+               "numEntries": 0
+              },
+              {
+               "nym": "carry a torch for",
+               "numEntries": 0
+              }
+             ]
+            }
+           ],
+           "antonyms": [
+            {
+             "nyms": [
+              {
+               "nym": "hate",
+               "numEntries": 1
+              },
+              {
+               "nym": "loathe",
+               "numEntries": 1
+              },
+              {
+               "nym": "detest",
+               "numEntries": 1
+              }
+             ]
+            }
+           ],
+           "examples": [
+            "I love you, Rory",
+            "she loves her family"
+           ]
+          }
+         ],
+         "subsenses": [
+          {
+           "definition": {
+            "fragments": [
+             {
+              "text": "like or enjoy very much."
+             }
+            ],
+            "text": "like or enjoy very much."
+           },
+           "conciseDefinition": "like or enjoy very much",
+           "exampleGroups": [
+            {
+             "examples": [
+              "I'd love a cup of tea"
+             ]
+            },
+            {
+             "examples": [
+              "I just love dancing"
+             ]
+            }
+           ],
+           "thesaurusEntries": [
+            {
+             "headword": "love",
+             "synonyms": [
+              {
+               "nyms": [
+                {
+                 "nym": "like very much",
+                 "numEntries": 0,
+                 "isCore": true
+                },
+                {
+                 "nym": "delight in",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "enjoy greatly",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "have a passion for",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "take great pleasure in",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "derive great pleasure from",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "have a great liking for",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "be addicted to",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "relish",
+                 "numEntries": 1
+                },
+                {
+                 "nym": "savour",
+                 "numEntries": 1
+                }
+               ]
+              },
+              {
+               "nyms": [
+                {
+                 "nym": "have a weakness for",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "be partial to",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "have a soft spot for",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "have a taste for",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "be taken with",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "have a predilection for",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "have a proclivity for",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "have a penchant for",
+                 "numEntries": 0
+                }
+               ]
+              },
+              {
+               "register": "informal",
+               "nyms": [
+                {
+                 "nym": "get a kick from/out of",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "have a thing about/for",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "be mad for/about",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "be crazy/nuts/wild/potty about",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "be hooked on",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "go a bundle on",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "get off on",
+                 "numEntries": 0
+                },
+                {
+                 "nym": "get a buzz from/out of",
+                 "numEntries": 0
+                }
+               ]
+              }
+             ],
+             "examples": [
+              "Laura had always loved painting"
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "entrySeqNo": 4785100,
+     "referenceId": "DWS-008985",
+     "headwordMatchesUserQuery": true
+    }
+   ],
+   "queryTerm": "love",
+   "usageOverTimeImage": {
+    "desktop": {
+     "width": 512,
+     "height": 120,
+     "url": "ngram/en/desktop/c227d79cc476d4b35956fd32a5ae9595857b30c3.png"
+    },
+    "mobile": {
+     "width": 544,
+     "height": 120,
+     "url": "ngram/en/mobile/c227d79cc476d4b35956fd32a5ae9595857b30c3.png"
+    },
+    "tablet": {
+     "width": 1040,
+     "height": 240,
+     "url": "ngram/en/tablet/c227d79cc476d4b35956fd32a5ae9595857b30c3.png"
+    }
+   }
+  }
+ ]
+}

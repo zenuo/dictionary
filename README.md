@@ -33,20 +33,34 @@ port = 1086
 ## Using
 > You can add this script to your `PATH`
 
-Open your terminal, and execute
+Open your terminal, and execute:
+
 ```sh
-$ ./google-dictionary.py dictionary
+$ ./google-dictionary.py love
 ```
 
 will output like this:
 ```
-dictionary |ˈdɪkʃ(ə)n(ə)ri|
+love |lʌv|
 
 [noun]
-   a book or electronic resource that lists the words of a language (typically in alphabetical order) and gives their meaning, or gives the equivalent words in a different language, often also providing information about pronunciation, origin, and usage.
-     • I'll look up 'love' in the dictionary
-     • the website gives access to an online dictionary
-     • the dictionary definition of ‘smile’
+   a strong feeling of affection.
+     • babies fill parents with intense feelings of love
+     • their <b>love for</b> their country
+   a great interest and pleasure in something.
+     • his <b>love for</b> football
+     • we share a <b>love of</b> music
+   a person or thing that one loves.
+     • she was <b>the love of his life</b>
+     • their two great loves are tobacco and whisky
+   (in tennis, squash, and some other sports) a score of zero; nil.
+     • love fifteen
+[verb]
+   feel deep affection or sexual love for (someone).
+     • do you love me?
+
 ```
+
+the response of Google API of this query is in [google-dictionary-love.json](./google-dictionary-love.json), you can get more information from it.
 
 *Thanks for your interest :)*
